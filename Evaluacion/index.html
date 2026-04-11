@@ -3,95 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OBE SPA</title>
+    <title>OBE SPA - Gestión de Obras</title>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
-    <link rel="stylesheet" href="CSS/estilo.css">
 </head>
-<body> <!--esta es la barra de navegacion, borrar comentarios en entrega final pls-->
-    <nav class ="grey darken-3">
+
+<body class="grey darken-3 white-text" style="display:flex; min-height:100vh; flex-direction:column;">
+
+
+<header>
+    <nav class="orange">
         <div class="nav-wrapper container">
+            <a href="#" class="brand-logo center">
+                <img src="assets\imgs\logo-obe.png" alt="logo obe" height="60">
+            </a>
 
-            <a href="#" class="brand-logo">OBE<span>SPA</span></a>
-
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#proyectos">Proyectos Activos</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#SobreNosotros">Sobre Nosotros</a></li>
+                <li><a href="#Proyectos">Proyectos</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
             </ul>
         </div>
-    </nav><!--cabecera de la seccion proyectos-->
-    <main class ="container">
-        <div class="section">
-            <h4 class="grey-text text-darken-3">Panel de Obras Activas</h4>
-            <p class="grey-text">Gestión de Proyectos en la Región de Atacama</p>
-        </div>
+    </nav>
+</header>
 
-        <div class="divider"></div>
+<main class="container" style="flex:1;">
 
+<!-- SECCIÓN PRINCIPAL -->
+    <section class="section center-align">
+        <h4><strong>¿Necesitas ayuda con alguna obra?</strong></h4>
+        <p class="flow-text">
+            Somos una empresa dedicada al desarrollo y ejecución de obras civiles, 
+            comprometida con la calidad, la seguridad y el cumplimiento en cada proyecto.
+        </p>
 
-<div id="proyectos" class="row section">   
-
-<!--proyecto 1-->
-    <div id="proyectos" class="row section">   
-
-        <div class="col s12 m6">
-            <div class="card hoverable">
-                            <div class="card-content">
-                    <span class="card-title">Edificio Atacama Plaza</span>
-                    <p>Estado<span class="badge green white-text left" style="margin-right:10px"> En curso </span>
-                    </p>
-                    <br>
-
-                    <p>Avance de la obra:</p>
-                                    <div class="progress grey lighten-3">
-                    <div class="determinate yellow darken-3" style="width: 85%"></div>
-                </div>
-
-                <p class="right-align">85%</p>
-            </div>
-
-            <div class="card-action">
-                <a href="#" class="yellow-text text-darken-4">
-                    Ver Detalles
-                </a>
-
+        <div class="row">
+            <div class="col s12 m6 offset-m3">
+                <div class="card-panel orange">
+                    <img src="assets/imgs/maquina.png" class="responsive-img z-depth-3">
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-<!--proyecto 2-->
 
-    <div id="proyectos" class="row section">   
-        <div class="col s12 m6">
-            <div class="card hoverable">
-                            <div class="card-content">
-                    <span class="card-title">Movimiento de Tierra Minera</span>
-                    <p>Estado<span class="badge green white-text left" style="margin-right:10px"> Planificacion </span>
-                    </p>
-                    <br>
-                                        <p>Avance de la obra:</p>
-                                        <div class="progress grey lighten-3">
-                        <div class="determinate yellow darken-3" style="width: 30%"></div>
-                    </div>
+<!-- SOBRE NOSOTROS -->
+    <section id="SobreNosotros" class="section">
+        <h4 class="center"><strong>Sobre Nosotros</strong></h4>
+        <p class="flow-text center-align">
+            En OBE SPA nos dedicamos al desarrollo y ejecución de proyectos de obras civiles, 
+            ofreciendo soluciones integrales para cada etapa de la construcción. Nuestro trabajo 
+            se basa en el compromiso con la calidad, la seguridad y el cumplimiento de los plazos 
+            establecidos, asegurando resultados confiables y eficientes en cada obra que realizamos.
+        </p>
 
-                    <p class="right-align">30%</p>
-                </div>
+        <p class="flow-text center-align">
+            Contamos con un equipo de profesionales y técnicos capacitados, así como con la maquinaria
+            y los recursos necesarios para llevar adelante distintos tipos de proyectos, desde movimientos
+            de tierra hasta obras de infraestructura. Nos enfocamos en planificar cada proceso con responsabilidad 
+            y precisión, manteniendo siempre altos estándares de trabajo.
+        </p>
+    </section>
 
-                <div class="card-action">
-                    <a href="#" class="yellow-text text-darken-4">
-                        Ver Detalles
-                    </a>
-                </div>
+<!-- PROYECTOS -->
+    <section id="Proyectos" class="section">
+        <h4 class="center"><strong>Proyectos</strong></h4>
+        <div class="row">
+            <div class="col s12 m4">
+                <img src="assets\imgs\pr1.png" class="responsive-img z-depth-2">
             </div>
+            <div class="col s12 m4">
+                <img src="assets\imgs\pr2.jpg" class="responsive-img z-depth-2">
+            </div>
+                <div class="col s12 m4">
+                    <img src="assets\imgs\pr3.jpg" class="responsive-img z-depth-2">
+                </div>
         </div>
-    </div>
-    
-</div>
+</section>
+<!-- FOOTER -->
+</main>
+    <footer class="page-footer grey darken-4">
+        <div class="container center">
+            <p>
+                ©2026 OBE SPA | Proyecto FrontEnd
+            </p>
+        </div>
+    </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    </main>
 </body>
 </html>
