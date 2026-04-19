@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .input-field input:focus {
+            border-bottom: 1px solid #ff9800 !important;
+            box-shadow: 0 1px 0 0 #ff9800 !important;
+        }
+        .input-field input:focus + label, .material-icons.active {
+            color: #ff9800 !important;
+        }
+        .input-field textarea:focus {
+            border-bottom: 1px solid #ff9800 !important;
+            box-shadow: 0 1px 0 0 #ff9800 !important;
+        }
+        .input-field textarea:focus + label {
+            color: #ff9800 !important;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OBE SPA - Gestión de Obras</title>
@@ -82,6 +103,44 @@
                 </div>
         </div>
 </section>
+<!--Contactos-->
+<section id="Contacto" class="section">
+        <h4 class="center"><strong>Contacto</strong></h4>
+        <p class="flow-text center-align">
+            Envíanos tus dudas o cotiza tu proyecto con nosotros.
+        </p>
+
+        <div class="row">
+            <form class="col s12 m8 offset-m2">
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix white-text">person</i>
+                        <input id="nombre" type="text" class="validate white-text">
+                        <label for="nombre" class="white-text">Nombre Completo</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix white-text">email</i>
+                        <input id="correo" type="email" class="validate white-text">
+                        <label for="correo" class="white-text">Correo Electrónico</label>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix white-text">mode_edit</i>
+                        <textarea id="mensaje" class="materialize-textarea white-text"></textarea>
+                        <label for="mensaje" class="white-text">Mensaje o Cotización</label>
+                    </div>
+                </div>
+                
+                <div class="center-align">
+                    <button class="btn waves-effect waves-light orange" type="button">Enviar Mensaje
+                        <i class="material-icons right white-text">send</i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
 <!-- FOOTER -->
 </main>
     <footer class="page-footer grey darken-4">
