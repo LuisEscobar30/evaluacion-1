@@ -6,7 +6,7 @@
         body {
             font-family: 'Montserrat', sans-serif;
         }
-        
+
         .input-field input:focus {
             border-bottom: 1px solid #ff9800 !important;
             box-shadow: 0 1px 0 0 #ff9800 !important;
@@ -21,6 +21,15 @@
         .input-field textarea:focus + label {
             color: #ff9800 !important;
         }
+        .menu-puro-css {
+            position: relative;
+        }
+        .menu-puro-css:hover .dropdown-content {
+            display: block !important;
+            opacity: 1 !important;
+            top: 100% !important;
+            transform: none !important;
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,20 +41,28 @@
 
 <body class="grey darken-3 white-text" style="display:flex; min-height:100vh; flex-direction:column;">
 
-
 <header>
     <nav class="orange">
         <div class="nav-wrapper container">
+
+            <ul class="left">
+                <li class="menu-puro-css">
+                    <a class="white-text" href="#!">
+                        Menú <i class="material-icons right">arrow_drop_down</i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#SobreNosotros">Sobre Nosotros</a></li>
+                        <li><a href="#Proyectos">Proyectos</a></li>
+                        <li><a href="#Contacto">Contacto</a></li>
+                    </ul>
+                </li>
+            </ul>
+
             <a href="#" class="brand-logo center">
-                <img src="assets\imgs\logo-obe.png" alt="logo obe" height="60">
+                <img src="assets/imgs/logo-obe.png" alt="logo obe" height="60">
             </a>
 
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#SobreNosotros">Sobre Nosotros</a></li>
-                <li><a href="#Proyectos">Proyectos</a></li>
-                <li><a href="#Contacto">Contacto</a></li>
-            </ul>
         </div>
     </nav>
 </header>
@@ -53,7 +70,7 @@
 <main class="container" style="flex:1;">
 
 <!-- SECCIÓN PRINCIPAL -->
-    <section class="section center-align">
+    <section id="inicio" class="section center-align">
         <h4><strong>¿Necesitas ayuda con alguna obra?</strong></h4>
         <p class="flow-text">
             Somos una empresa dedicada al desarrollo y ejecución de obras civiles, 
@@ -68,7 +85,6 @@
             </div>
         </div>
     </section>
-
 
 <!-- SOBRE NOSOTROS -->
     <section id="SobreNosotros" class="section">
@@ -93,18 +109,19 @@
         <h4 class="center"><strong>Proyectos</strong></h4>
         <div class="row">
             <div class="col s12 m4">
-                <img src="assets\imgs\pr1.png" class="responsive-img z-depth-2">
+                <img src="assets/imgs/pr1.png" class="responsive-img z-depth-2">
             </div>
             <div class="col s12 m4">
-                <img src="assets\imgs\pr2.jpg" class="responsive-img z-depth-2">
+                <img src="assets/imgs/pr2.jpg" class="responsive-img z-depth-2">
             </div>
                 <div class="col s12 m4">
-                    <img src="assets\imgs\pr3.jpg" class="responsive-img z-depth-2">
+                    <img src="assets/imgs/pr3.jpg" class="responsive-img z-depth-2">
                 </div>
         </div>
-</section>
+    </section>
+
 <!--Contactos-->
-<section id="Contacto" class="section">
+    <section id="Contacto" class="section">
         <h4 class="center"><strong>Contacto</strong></h4>
         <p class="flow-text center-align">
             Envíanos tus dudas o cotiza tu proyecto con nosotros.
@@ -143,14 +160,15 @@
     </section>
 <!-- FOOTER -->
 </main>
-    <footer class="page-footer grey darken-4">
-        <div class="container center">
-            <p>
-                ©2026 OBE SPA | Proyecto FrontEnd
-            </p>
-        </div>
-    </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<footer class="page-footer grey darken-4">
+    <div class="container center">
+        <p>
+            ©2026 OBE SPA | Proyecto FrontEnd
+        </p>
+    </div>
+</footer>
+
 
 </body>
 </html>
