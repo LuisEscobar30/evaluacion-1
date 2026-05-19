@@ -3,7 +3,7 @@
 <head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OBE SPA - Inicio</title>
+    <title>OBE SPA - Contacto</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -37,18 +37,38 @@
 </header>
 
 <main class="container">
-    <section id="inicio" class="section center-align">
-        <h4><strong>¿Necesitas ayuda con alguna obra?</strong></h4>
-        <p class="flow-text">
-            Somos una empresa dedicada al desarrollo y ejecución de obras civiles, 
-            comprometida con la calidad, la seguridad y el cumplimiento en cada proyecto.
+    <section id="Contacto" class="section">
+        <h4 class="center"><strong>Contacto</strong></h4>
+        <p class="flow-text center-align">
+            Envíanos tus dudas o cotiza tu proyecto con nosotros.
         </p>
         <div class="row">
-            <div class="col s12 m6 offset-m3">
-                <div class="card-panel orange">
-                    <img src="assets/imgs/maquina.png" class="responsive-img z-depth-3" alt="Maquinaria">
+            <form class="col s12 m8 offset-m2">
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix white-text">person</i>
+                        <input id="nombre" type="text" class="validate white-text">
+                        <label for="nombre" class="white-text">Nombre Completo</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix white-text">email</i>
+                        <input id="correo" type="email" class="validate white-text">
+                        <label for="correo" class="white-text">Correo Electrónico</label>
+                    </div>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix white-text">mode_edit</i>
+                        <textarea id="mensaje" class="materialize-textarea white-text"></textarea>
+                        <label for="mensaje" class="white-text">Mensaje o Cotización</label>
+                    </div>
+                </div>
+                <div class="center-align">
+                    <button class="btn waves-effect waves-light orange" type="button">Enviar Mensaje
+                        <i class="material-icons right white-text">send</i>
+                    </button>
+                </div>
+            </form>
         </div>
     </section>
 </main>
