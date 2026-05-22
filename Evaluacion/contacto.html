@@ -1,86 +1,267 @@
 <!DOCTYPE html>
 <html lang="es">
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OBE SPA - Contacto</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="assets/css/estilos.css">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OBE SPA — Contacto</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets\css\ccs1.css"/>
+  <style>
+    .info-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 6px; padding: 26px 22px;
+      display: flex; align-items: flex-start; gap: 16px;
+      margin-bottom: 14px;
+      transition: border-color .3s, box-shadow .3s;
+    }
+    .info-card:hover { border-color: var(--cyan); box-shadow: 0 0 18px rgba(0,229,209,.1); }
+    .info-icon {
+      width: 42px; height: 42px; border-radius: 4px; flex-shrink: 0;
+      background: rgba(0,229,209,.09); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .info-icon i { color: var(--cyan); font-size: 1.25rem; }
+    .info-label { font-family:'Orbitron',sans-serif; font-size:.6rem; letter-spacing:.12em; color:rgba(224,247,245,.38); margin-bottom:5px; }
+    .info-value { font-size:1rem; color:#e0f7f5; }
+
+    .faq-item {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 6px; overflow: hidden; margin-bottom: 10px;
+    }
+    .faq-question {
+      padding: 18px 20px; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: 'Orbitron', sans-serif; font-size: .78rem; color: #e0f7f5;
+      transition: color .25s;
+      user-select: none;
+    }
+    .faq-question:hover { color: var(--cyan); }
+    .faq-question i { color: var(--cyan); transition: transform .3s; }
+    .faq-question.open i { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height .4s ease, padding .3s;
+      padding: 0 20px;
+      color: rgba(224,247,245,.55); font-size: .95rem; line-height: 1.75;
+    }
+    .faq-answer.open { max-height: 200px; padding: 0 20px 18px; }
+
+    /* Toast override */
+    .toast-cyan { background: var(--cyan) !important; color: var(--darker) !important; font-family:'Orbitron',sans-serif; font-size:.7rem; }
+
+    /* Custom select styling */
+    .contact-form select {
+      appearance: none; -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2300e5d1' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E") !important;
+      background-repeat: no-repeat !important;
+      background-position: right 14px center !important;
+    }
+    .contact-form select option { background: var(--card); color: #e0f7f5; }
+  </style>
 </head>
+<body>
 
-<body class="grey darken-3 white-text">
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-wrapper container nav-flex">
+    <a href="index.html" class="brand-logo">
+      <i class="material-icons">build</i> OBE SPA
+    </a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="index.html">INICIO</a></li>
+      <li><a href="proyectos.html">PROYECTOS</a></li>
+      <li class="active"><a href="contacto.html">CONTACTO</a></li>
+    </ul>
+    </a>
+    <a href="#" data-target="mobile-menu" class="sidenav-trigger right" style="color:var(--cyan);">
+      <i class="material-icons">menu</i>
+    </a>
+  </div>
+</nav>
+<ul class="sidenav" id="mobile-menu">
+  <li><a href="index.html">INICIO</a></li>
+  <li><a href="proyectos.html">PROYECTOS</a></li>
+  <li><a href="contacto.html">CONTACTO</a></li>
+</ul>
 
-<header>
-    <nav class="orange">
-        <div class="nav-wrapper container">
-            <ul class="left">
-                <li class="menu-puro-css">
-                    <a class="white-text" href="#!">
-                        Menú <i class="material-icons right">arrow_drop_down</i>
-                    </a>
-                    <ul class="dropdown-content">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-                        <li><a href="proyectos.html">Proyectos</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="info-empresa.html">Info Empresa</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <a href="index.html" class="brand-logo center">
-                <img src="assets/imgs/logo-obe.png" alt="logo obe" height="60">
-            </a>
+<!-- PAGE BANNER -->
+<div class="page-banner">
+  <div class="container">
+    <p class="page-banner-label reveal">// CONTACTO</p>
+    <h1 class="page-banner-title reveal" style="transition-delay:.08s;">
+      Hablemos de tu <span class="accent">obra</span>
+    </h1>
+    <p class="page-banner-desc reveal" style="transition-delay:.16s;">
+      ¿Tienes una obra o proyecto? Nuestro equipo responde en menos de 24 horas.
+    </p>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<section>
+  <div class="container">
+    <div class="row">
+
+      <!-- LEFT: Contact info + FAQ -->
+      <div class="col s12 l4" style="margin-bottom:32px;">
+        <p class="section-label reveal">// INFORMACIÓN</p>
+        <div style="height:20px;"></div>
+
+        <div class="info-card reveal" style="transition-delay:.08s;">
+          <div class="info-icon"><i class="material-icons">mail_outline</i></div>
+          <div>
+            <div class="info-label">EMAIL</div>
+            <div class="info-value">contacto@obespa.com</div>
+          </div>
         </div>
-    </nav>
-</header>
 
-<main class="container">
-    <section id="Contacto" class="section">
-        <h4 class="center"><strong>Contacto</strong></h4>
-        <p class="flow-text center-align">
-            Envíanos tus dudas o cotiza tu proyecto con nosotros.
-        </p>
-        <div class="row">
-            <form class="col s12 m8 offset-m2">
-                <div class="row">
-                    <div class="input-field col s12 m6">
-                        <i class="material-icons prefix white-text">person</i>
-                        <input id="nombre" type="text" class="validate white-text">
-                        <label for="nombre" class="white-text">Nombre Completo</label>
-                    </div>
-                    <div class="input-field col s12 m6">
-                        <i class="material-icons prefix white-text">email</i>
-                        <input id="correo" type="email" class="validate white-text">
-                        <label for="correo" class="white-text">Correo Electrónico</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix white-text">mode_edit</i>
-                        <textarea id="mensaje" class="materialize-textarea white-text"></textarea>
-                        <label for="mensaje" class="white-text">Mensaje o Cotización</label>
-                    </div>
-                </div>
-                <div class="center-align">
-                    <button class="btn waves-effect waves-light orange" type="button">Enviar Mensaje
-                        <i class="material-icons right white-text">send</i>
-                    </button>
-                </div>
-            </form>
+        <div class="info-card reveal" style="transition-delay:.14s;">
+          <div class="info-icon"><i class="material-icons">schedule</i></div>
+          <div>
+            <div class="info-label">TIEMPO DE RESPUESTA</div>
+            <div class="info-value">Menos de 24 horas</div>
+          </div>
         </div>
-    </section>
-</main>
 
-<footer class="page-footer grey darken-4">
-    <div class="container center">
-        <p>©2026 OBE SPA | Proyecto FrontEnd</p>
+        <div class="info-card reveal" style="transition-delay:.2s;">
+          <div class="info-icon"><i class="material-icons">language</i></div>
+          <div>
+            <div class="info-label">COBERTURA</div>
+            <div class="info-value">100% Online · Nacional</div>
+          </div>
+        </div>
+
+        <div class="info-card reveal" style="transition-delay:.26s;">
+          <div class="info-icon"><i class="material-icons">build</i></div>
+          <div>
+            <div class="info-label">SOPORTE</div>
+            <div class="info-value"> Email </div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div style="margin-top:44px;">
+          <p class="section-label reveal" style="margin-bottom:18px;">// PREGUNTAS FRECUENTES</p>
+
+          <div class="faq-item reveal" style="transition-delay:.08s;">
+            <div class="faq-question"><span>¿En cuánto tiempo entregan un resonden?</span><i class="material-icons">keyboard_arrow_down</i></div>
+            <div class="faq-answer"> en 24–48 horas.</div>
+          </div>
+          <div class="faq-item reveal" style="transition-delay:.14s;">
+            <div class="faq-question"><span>agregar pregunta xd</span><i class="material-icons">keyboard_arrow_down</i></div>
+            <div class="faq-answer">RESPUESTA XD</div>
+          </div>
+          <div class="faq-item reveal" style="transition-delay:.2s;">
+            <div class="faq-question"><span>agregar pregunta xd</span><i class="material-icons">keyboard_arrow_down</i></div>
+            <div class="faq-answer">RESPUESTA XD</div>
+          </div>
+          <div class="faq-item reveal" style="transition-delay:.26s;">
+            <div class="faq-question"><span>agregar pregunta xd</span><i class="material-icons">keyboard_arrow_down</i></div>
+            <div class="faq-answer">RESPUESTA XD</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div class="col s12 l7 offset-l1">
+        <p class="section-label reveal">// FORMULARIO</p>
+        <div style="height:20px;"></div>
+
+        <form class="contact-form reveal" id="contact-form" style="transition-delay:.08s;" onsubmit="return false;">
+
+          <div class="row" style="margin-bottom:0;">
+            <div class="col s12 m6">
+              <label>Nombre artístico *</label>
+              <input type="text" placeholder="Tu nombre" required/>
+            </div>
+            <div class="col s12 m6">
+              <label>Correo electrónico *</label>
+              <input type="email" placeholder="tu@correo.com" required/>
+            </div>
+          </div>
+
+          <div class="row" style="margin-bottom:0;">
+            <div class="col s12 m6">
+              <label>Tipo de obra</label>
+              <select>
+                <option value="" disabled selected>Selecciona tu obra</option>
+                <option>opcion 1</option>
+                <option>opcion 2</option>
+                <option>opcion 3</option>
+                <option>opcion 4</option>
+                <option>opcion 5</option>
+                <option>opcion 6</option>
+                <option>opcion 7</option>
+              </select>
+            </div>
+            <div class="col s12 m6">
+              <label>Presupuesto aproximado</label>
+              <select>
+                <option value="" disabled selected>Elige un rango</option>
+                <option>$menos de 200.000</option>
+                <option>$200.000 a 400.000</option>
+                <option>$400.000 a 800.000</option>
+                <option>$800.000 o mas</option>
+                <option>Presupuesto personalizado</option>
+              </select>
+            </div>
+          </div>
+
+          <label>Cuéntanos sobre tu obra o proyecto *</label>
+          <textarea placeholder="Describe tu obra o proyecto" required></textarea>
+
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+            <input type="checkbox" id="terms" style="width:auto;height:auto;margin:0;padding:0;border:none;background:transparent;"/>
+            <label for="terms" style="margin:0;cursor:pointer;font-size:.88rem;">
+              Acepto los <a href="#" style="color:var(--cyan);">términos y condiciones</a>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-hero-primary waves-effect waves-light" style="width:100%;font-size:.65rem;">
+            ENVIAR MENSAJE &nbsp;→
+          </button>
+        </form>
+      </div>
+
     </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-logo"><i class="material-icons" style="vertical-align:middle;font-size:1.1rem;">build</i> OBE SPA</div>
+    <div class="footer-links">
+      <a href="index.html">INICIO</a>
+      <a href="proyectos.html">PROYECTOS</a>
+      <a href="contacto.html">CONTACTO</a>
+    </div>
+    <p class="footer-copy">© 2026 OBE SPA · Proyecto FrontEnd</p>
+  </div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="assets\js\js1.js"></script>
+<script>
+  // ── FAQ accordion ──
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const answer = q.nextElementSibling;
+      const isOpen = answer.classList.contains('open');
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-question').forEach(qq => qq.classList.remove('open'));
+      if (!isOpen) { answer.classList.add('open'); q.classList.add('open'); }
+    });
+  });
 
+  // ── Form submit ──
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    M.toast({ html: '✓ Mensaje enviado. Te contactaremos pronto.', classes: 'toast-cyan' });
+    this.reset();
+  });
+</script>
 </body>
 </html>

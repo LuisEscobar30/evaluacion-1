@@ -1,67 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OBE SPA - Inicio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="assets/css/estilos.css">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OBE SPA - Inicio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets\css\ccs1.css"/>
 </head>
+<body>
 
-<body class="grey darken-3 white-text">
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-wrapper container nav-flex">
+    <a href="index.html" class="brand-logo">
+      <i class="material-icons">build</i> OBE SPA
+    </a>
+    <ul class="right hide-on-med-and-down">
+      <li class="active"><a href="index.html">INICIO</a></li>
+      <li><a href="proyectos.html">PROYECTOS</a></li>
+      <li><a href="contacto.html">CONTACTO</a></li>
+    </ul>
+    </a>
+    <a href="#" data-target="mobile-menu" class="sidenav-trigger right" style="color:var(--cyan);">
+      <i class="material-icons">menu</i>
+    </a>
+  </div>
+</nav>
+<ul class="sidenav" id="mobile-menu">
+  <li><a href="index.html">INICIO</a></li>
+  <li><a href="proyectos.html">PROYECTOS</a></li>
+  <li><a href="contacto.html">CONTACTO</a></li>
+</ul>
 
-<header>
-    <div class="navbar-fixed">
-    <nav class="orange">
-        <div class="nav-wrapper container">
-            <ul class="left">
-                <li class="menu-puro-css">
-                    <a class="white-text" href="#!">
-                        Menú <i class="material-icons right">arrow_drop_down</i>
-                    </a>
-                    <ul class="dropdown-content">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-                        <li><a href="proyectos.html">Proyectos</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="info-empresa.html">Info Empresa</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <a href="index.html" class="brand-logo center">
-                <img src="assets/imgs/logo-obe.png" alt="logo obe" height="60">
-            </a>
+<!-- HERO -->
+<div id="hero">
+  <div class="container">
+    <div class="row valign-wrapper hero-row">
+
+      <!-- LEFT -->
+      <div class="col s12 l6 hero-left">
+        <p class="hero-tag reveal">OBE SPA — CONTRUCCION INDUSTRIAL</p>
+        <h1 class="hero-title reveal" style="transition-delay:.1s">
+          ¿Necesitas ayuda con alguna<br>con tu <span class="accent">obra?</span>
+        </h1>
+        <p class="hero-desc reveal" style="transition-delay:.2s">
+          Ejecutamos proyectos de obras civiles, movimiento de tierras e infraestructura 
+          con precios claros y plazos cumplidos. Cotiza online en minutos.
+        </p>
+        <div class="btn-row reveal" style="transition-delay:.3s">
+          <a href="proyectos.html" class="btn btn-hero-primary waves-effect waves-light">
+            Ver Proyectos &nbsp;→
+          </a>
+          <a href="contacto.html" class="btn btn-hero-outline waves-effect">
+            <i class="material-icons left" style="font-size:1rem;line-height:48px;">build</i>
+            Hacer Cotizacion
+          </a>
         </div>
-    </nav>
+        <div class="stats-row reveal" style="transition-delay:.4s">
+          <div>
+            <div class="stat-num">+150</div>
+            <div class="stat-label">OBRAS REALIZADAS</div>
+          </div>
+          <div>
+            <div class="stat-num">12 años</div>
+            <div class="stat-label">EN EL RUBRO</div>
+          </div>
+          <div>
+            <div class="stat-num">100%</div>
+            <div class="stat-label">CUMPLIMIENTO</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="col l6 hide-on-med-and-down hero-img-col">
+        <img src="assets/imgs/logo-obe.png" alt="Logo Obe"
+             onerror="this.style.display='none'"/>
+        <svg class="circuit-overlay" viewBox="0 0 500 600" fill="none">
+          <path d="M260 80 L320 80 L320 140 L380 140" stroke="#00e5d1" stroke-width="1.5" stroke-opacity=".4"/>
+          <circle cx="380" cy="140" r="5" fill="#00e5d1" fill-opacity=".5"/>
+          <path d="M200 200 L160 200 L160 260" stroke="#00e5d1" stroke-width="1" stroke-opacity=".3"/>
+          <circle cx="160" cy="260" r="4" fill="#00e5d1" fill-opacity=".4"/>
+          <path d="M340 350 L400 350 L400 300" stroke="#ff2d78" stroke-width="1" stroke-opacity=".3"/>
+          <circle cx="400" cy="300" r="3" fill="#ff2d78" fill-opacity=".5"/>
+        </svg>
+        <svg class="sparkle" style="bottom:60px;right:40px;" viewBox="0 0 24 24" fill="white">
+          <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z"/>
+        </svg>
+      </div>
+
+    </div>
+  </div>
 </div>
 
-<main class="container">
-    <section id="inicio" class="section center-align">
-        <h4><strong>¿Necesitas ayuda con alguna obra?</strong></h4>
-        <p class="flow-text">
-            Somos una empresa dedicada al desarrollo y ejecución de obras civiles, 
-            comprometida con la calidad, la seguridad y el cumplimiento en cada proyecto.
-        </p>
-        <div class="row">
-            <div class="col s12 m6 offset-m3">
-                <div class="card-panel orange">
-                    <img src="assets/imgs/maquina.png" class="responsive-img z-depth-3" alt="Maquinaria">
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
-
-<footer class="page-footer grey darken-4">
-    <div class="container center">
-        <p>©2026 OBE SPA | Proyecto FrontEnd</p>
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-logo"><i class="material-icons" style="vertical-align:middle;font-size:1.1rem;">build</i> OBE SPA</div>
+    <div class="footer-links">
+      <a href="index.html">INICIO</a>
+      <a href="proyectos.html">PROYECTOS</a>
+      <a href="contacto.html">CONTACTO</a>
     </div>
+    <p class="footer-copy">© 2026 OBE SPA · Proyecto FrontEnd</p>
+  </div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="assets/js/main.js"></script>
-
+<script src="assets\js\js1.js"></script>
 </body>
 </html>
