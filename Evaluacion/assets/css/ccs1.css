@@ -361,3 +361,80 @@ footer {
 }
 
 .container { width:90%; max-width:1260px; }
+
+
+/* Estilo del contador sobre el botón flotante */
+.fixed-action-btn .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    z-index: 10;
+}
+
+/*cambia colores de recuadro de carrito de compras*/
+
+#modal-carrito {
+    background-color:rgba(0,229,209,.08) !important; 
+
+}
+
+#modal-carrito .modal-footer {
+    background-color: rgba(0,229,209,.08) !important;
+
+}
+
+/* Resalta el total en el carrito */
+#lista-carrito .active.blue {
+    background-color:rgba(0,229,209,.08) !important;
+    display: flex;
+    justify-content: space-between;
+    color:  #ff922d;
+   
+}
+
+/* ── CARRITO ESTILIZADO ── */
+.fixed-action-btn .btn-floating { background-color: var(--orange) !important; }
+.fixed-action-btn .badge { 
+  background: var(--orange) !important; color: var(--dark) !important; 
+  font-weight: bold; border-radius: 50%;
+}
+
+/* Modal con tus colores */
+#modal-carrito { 
+  background-color: var(--card) !important; 
+  border: 1px solid var(--border); 
+  color: #e0f7f5;
+}
+#modal-carrito h4 { color: var(--orange); font-family: 'Orbitron'; }
+#modal-carrito .collection { border: none; background: transparent; }
+#modal-carrito .collection-item { 
+  background-color: rgba(0,0,0,0.2) !important; 
+  border-bottom: 1px solid var(--border) !important; 
+  color: #e0f7f5;
+}
+.btn-anadir { background-color: var(--orange) !important; color: var(--dark) !important; font-weight: bold; }
+
+/* Integración Carrito OBE SPA */
+.btn-anadir { background-color: var(--orange) !important; color: var(--dark) !important; font-weight: bold; width: 100%; }
+.fixed-action-btn .btn-floating { background-color: var(--orange) !important; }
+.fixed-action-btn .badge { background: var(--orange) !important; color: var(--dark) !important; font-weight: bold; }
+
+#modal-carrito { background-color: var(--card) !important; border: 1px solid var(--border); }
+#modal-carrito h4 { color: var(--orange); font-family: 'Orbitron'; }
+#modal-carrito .collection { border: none; background: transparent; }
+#modal-carrito .collection-item { background-color: rgba(0,0,0,0.2) !important; border-bottom: 1px solid var(--border) !important; color: #e0f7f5; }
+#modal-carrito .total-row { background-color: var(--orange) !important; color: var(--dark) !important; font-weight: bold; }
+
+/* Estilos Corregidos Carrito */
+.btn-anadir { background-color: var(--orange) !important; color: var(--dark) !important; font-weight: bold; width: 100%; }
+.fixed-action-btn .btn-floating { background-color: var(--orange) !important; }
+.fixed-action-btn .badge { background: var(--orange) !important; color: var(--dark) !important; font-weight: bold; }
+
+#modal-carrito { background-color: var(--card) !important; border: 1px solid var(--border); color: #e0f7f5; }
+#modal-carrito h4 { color: var(--orange); font-family: 'Orbitron'; }
+#modal-carrito .collection { border: none; background: transparent; }
+#modal-carrito .collection-item { background-color: rgba(0,0,0,0.2) !important; border-bottom: 1px solid var(--border) !important; color: #e0f7f5; }
+#modal-carrito .total-row { background-color: var(--orange) !important; color: var(--dark) !important; font-weight: bold; }

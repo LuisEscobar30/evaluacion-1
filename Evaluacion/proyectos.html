@@ -7,117 +7,87 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets\css\ccs1.css"/>
+  <link rel="stylesheet" href="assets/css/ccs1.css"/>
+  
   <style>
-    .process-step {
-      display: flex; gap: 22px; align-items: flex-start;
-      margin-bottom: 36px; padding-bottom: 36px;
-      border-bottom: 1px solid var(--border);
-    }
-    .process-step:last-child { border-bottom: none; margin-bottom: 0; }
-    .step-num {
-      font-family: 'Orbitron', sans-serif; font-size: 2rem;
-      font-weight: 900; color: var(--cyan); opacity: .25;
-      min-width: 48px; line-height: 1;
-    }
-    .step-title { font-family:'Orbitron',sans-serif; font-size:.9rem; color:#e0f7f5; margin-bottom:8px; }
-    .step-desc  { color: rgba(224,247,245,.55); font-size:.95rem; line-height:1.7; }
-
-    .tag-list { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
-    .tag {
-      font-family:'Orbitron',sans-serif; font-size:.55rem;
-      letter-spacing:.1em; color:var(--cyan);
-      background:rgba(0,229,209,.08); border:1px solid var(--border);
-      border-radius:3px; padding:4px 10px;
-    }
-
+    /* Estilos base para la consistencia del diseño */
     .price-card {
       background: var(--card); border:1px solid var(--border);
       border-radius:6px; padding:32px 28px; text-align:center;
       transition: border-color .3s, box-shadow .3s, transform .3s;
       height:100%;
     }
-    .price-card:hover {
-      border-color:var(--cyan);
-      box-shadow:0 0 28px rgba(0,229,209,.14);
-      transform:translateY(-6px);
-    }
-    .price-card.featured {
-      border-color: var(--cyan);
-      box-shadow: 0 0 32px rgba(0,229,209,.2);
-      position:relative; overflow:hidden;
-    }
-    .price-card.featured::before {
-      content:'POPULAR';
-      position:absolute; top:14px; right:-24px;
-      background:var(--pink); color:#fff;
-      font-family:'Orbitron',sans-serif; font-size:.5rem; letter-spacing:.15em;
-      padding:4px 34px; transform:rotate(38deg);
-    }
-    .price-name { font-family:'Orbitron',sans-serif; font-size:.8rem; color:var(--cyan); margin-bottom:14px; letter-spacing:.12em; }
+    .price-card:hover { border-color:var(--orange); box-shadow:0 0 28px rgba(0,229,209,.14); transform:translateY(-6px); }
+    .price-name { font-family:'Orbitron',sans-serif; font-size:.8rem; color:var(--orange); margin-bottom:14px; letter-spacing:.12em; }
     .price-amount { font-family:'Orbitron',sans-serif; font-size:2.8rem; font-weight:900; color:#e0f7f5; }
-    .price-period { font-size:.8rem; color:rgba(224,247,245,.4); margin-bottom:20px; }
-    .price-features { list-style:none; text-align:left; margin:18px 0 24px; }
-    .price-features li {
-      font-size:.92rem; color:rgba(224,247,245,.6);
-      padding:7px 0; border-bottom:1px solid var(--border);
-      display:flex; align-items:center; gap:8px;
-    }
-    .price-features li i { color:var(--cyan); font-size:.95rem; }
+    .btn-anadir { margin-top: 20px; background-color: var(--orange) !important; color: var(--dark) !important; font-weight: bold; width: 100%; }
   </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav>
   <div class="nav-wrapper container nav-flex">
-    <a href="index.html" class="brand-logo">
-      <i class="material-icons">build</i> OBE SPA
-    </a>
+    <a href="index.html" class="brand-logo"><i class="material-icons">build</i> OBE SPA</a>
     <ul class="right hide-on-med-and-down">
       <li><a href="index.html">INICIO</a></li>
       <li class="active"><a href="proyectos.html">PROYECTOS</a></li>
       <li><a href="contacto.html">CONTACTO</a></li>
     </ul>
-    </a>
-    <a href="#" data-target="mobile-menu" class="sidenav-trigger right" style="color:var(--cyan);">
-      <i class="material-icons">menu</i>
-    </a>
+    <a href="#" data-target="mobile-menu" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
   </div>
 </nav>
-<ul class="sidenav" id="mobile-menu">
-  <li><a href="index.html">INICIO</a></li>
-  <li><a href="proyectos.html">PROYECTOS</a></li>
-  <li><a href="contacto.html">CONTACTO</a></li>
-</ul>
-<!-- PAGE BANNER -->
+
 <div class="page-banner">
   <div class="container">
-    <p class="page-banner-label reveal">// NUESTROS PROYECTOS</p>
-    <h1 class="page-banner-title reveal" style="transition-delay:.08s;">
-      Obras civiles <span class="accent">sin límites</span>
-    </h1>
-    <p class="page-banner-desc reveal" style="transition-delay:.16s;">
-      AGREGAR TEXTO AL FINAL XD
-    </p>
+    <p class="page-banner-label">// NUESTROS PROYECTOS</p>
+    <h1 class="page-banner-title">Obras civiles <span class="accent">sin límites</span></h1>
   </div>
 </div>
 
+<main class="container" style="padding: 50px 0;">
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="price-card">
+        <div class="price-name">PROYECTO MINERÍA A</div>
+        <div class="price-amount">$500</div>
+        <button class="btn btn-anadir" data-nombre="Proyecto Minería A" data-precio="500">Añadir al Carrito</button>
+      </div>
+    </div>
 
-<!-- FOOTER -->
+    <div class="col s12 m4">
+      <div class="price-card">
+        <div class="price-name">PROYECTO MINERÍA B</div>
+        <div class="price-amount">$800</div>
+        <button class="btn btn-anadir" data-nombre="Proyecto Minería B" data-precio="800">Añadir al Carrito</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large modal-trigger" href="#modal-carrito">
+        <i class="large material-icons">shopping_cart</i>
+        <span class="badge" id="contador-carrito">0</span>
+    </a>
+</div>
+
+<div id="modal-carrito" class="modal">
+    <div class="modal-content">
+        <h4>Tu Cotización</h4>
+        <ul class="collection" id="lista-carrito"></ul>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect btn-flat">Cerrar</a>
+    </div>
+</div>
+
 <footer>
   <div class="container">
-    <div class="footer-logo"><i class="material-icons" style="vertical-align:middle;font-size:1.1rem;">build</i> OBE SPA</div>
-    <div class="footer-links">
-      <a href="index.html">INICIO</a>
-      <a href="proyectos.html">PROYECTOS</a>
-      <a href="contacto.html">CONTACTO</a>
-    </div>
     <p class="footer-copy">© 2026 OBE SPA · Proyecto FrontEnd</p>
   </div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="assets\js\js1.js"></script>
+<script src="assets/js/carrito.js"></script>
 </body>
 </html>
