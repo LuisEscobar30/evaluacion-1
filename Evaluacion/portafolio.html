@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>OBE SPA - Proyectos</title>
+  <title>OBE SPA - Portafolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet"/>
@@ -16,8 +16,8 @@
     <a href="index.html" class="brand-logo"><i class="material-icons">build</i> OBE SPA</a>
     <ul class="right hide-on-med-and-down">
       <li><a href="index.html">INICIO</a></li>
-      <li class="active"><a href="proyectos.html">PROYECTOS</a></li>
-      <li><a href="portafolio.html">PORTAFOLIO</a></li>
+      <li><a href="proyectos.html">PROYECTOS</a></li>
+      <li class="active"><a href="portafolio.html">PORTAFOLIO</a></li>
       <li><a href="contacto.html">CONTACTO</a></li>
       <li>
         <a href="#modal-carrito" class="modal-trigger nav-cta">
@@ -41,8 +41,8 @@
 <!-- Menú Móvil con ARIA -->
 <ul class="sidenav" id="mobile-menu" aria-hidden="true">
   <li><a href="index.html">INICIO</a></li>
-  <li class="active"><a href="proyectos.html">PROYECTOS</a></li>
-  <li><a href="portafolio.html">PORTAFOLIO</a></li>
+  <li><a href="proyectos.html">PROYECTOS</a></li>
+  <li class="active"><a href="portafolio.html">PORTAFOLIO</a></li>
   <li><a href="contacto.html">CONTACTO</a></li>
   <li><a href="#modal-carrito" class="modal-trigger"><i class="material-icons">shopping_cart</i> Ver Carrito</a></li>
   <!-- Botón Modo Oscuro Móvil -->
@@ -51,26 +51,25 @@
 
 <div class="page-banner">
   <div class="container">
-    <p class="page-banner-label">// SOLUCIONES PREFABRICADAS</p>
-    <h1 class="page-banner-title">Obras civiles <span class="accent">sin límites</span></h1>
+    <p class="page-banner-label">// EXPERIENCIA COMPROBADA</p>
+    <h1 class="page-banner-title">Obras <span class="accent">Realizadas</span></h1>
   </div>
 </div>
 
 <main class="container page-content-padded">
-  
   <div class="row">
-    <div class="col s12 category-filters">
-      <button class="btn btn-filter active" data-filter="Todos">Ver Todos</button>
-      <button class="btn btn-filter" data-filter="Industrial">Área Industrial</button>
-      <button class="btn btn-filter" data-filter="Modular">Soluciones Modulares</button>
-      <button class="btn btn-filter" data-filter="Perimetral">Cierres Perimetrales</button>
+    
+    <div class="col s12 m6 l4">
+      <div class="portafolio-card reveal">
+        <div class="card-image-box">
+            <img src="assets/imgs/logo-obe.png" alt="Obra 1">
+        </div>
+        <h5 class="portafolio-title">Bodega Lampa</h5>
+        <p class="card-desc">Construcción de radier industrial y estructura metálica para bodega de 2000m2.</p>
+      </div>
     </div>
+
   </div>
-
-  <!-- aria-live="polite" añadido para accesibilidad al filtrar -->
-  <div class="row" id="contenedor-proyectos" aria-live="polite">
-    </div>
-
 </main>
 
 <div id="modal-carrito" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
