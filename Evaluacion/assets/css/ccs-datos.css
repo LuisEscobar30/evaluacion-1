@@ -1,0 +1,41 @@
+body{
+  background:#0f172a;
+  color:white;
+  min-height:100vh;
+}
+
+nav{
+  margin-bottom:30px;
+}
+
+.card{
+  border-radius:20px;
+}
+
+.card-title{
+  font-weight:bold;
+  margin-bottom:30px !important;
+}
+
+.info-box{
+  margin-bottom:25px;
+  padding:15px;
+  border-radius:12px;
+  background:rgba(255,255,255,0.05);
+}
+
+.info-box h6{
+  color:#4fc3f7;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.info-box p{
+  margin:0;
+  font-size:1.1rem;
+  word-break:break-word;
+}
+
+.btn{
+  border-radius:12px;
+}
