@@ -8,6 +8,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/css/ccs1.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="assets\js\carrusel.js"></script>
 </head>
 <body>
 
@@ -25,27 +27,27 @@
         </a>
       </li>
       <!-- Botón Modo Oscuro Escritorio -->
+      <!--botón modo oscuro escritorio-->
       <li>
         <a href="#" id="theme-toggle" aria-label="Alternar modo oscuro">
           <i class="material-icons">brightness_6</i>
         </a>
       </li>
     </ul>
-    <!-- Botón Menú Móvil con ARIA -->
+      <!--botón menú movil-->
     <a href="#" id="menu-trigger" data-target="mobile-menu" class="sidenav-trigger right" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú de navegación">
       <i class="material-icons menu-icon-orange">menu</i>
     </a>
   </div>
 </nav>
-
-<!-- Menú Móvil con ARIA -->
+<!--menú movil-->
 <ul class="sidenav" id="mobile-menu" aria-hidden="true">
   <li><a href="index.html">INICIO</a></li>
   <li><a href="proyectos.html">PROYECTOS</a></li>
   <li class="active"><a href="portafolio.html">PORTAFOLIO</a></li>
   <li><a href="contacto.html">CONTACTO</a></li>
   <li><a href="#modal-carrito" class="modal-trigger"><i class="material-icons">shopping_cart</i> Ver Carrito</a></li>
-  <!-- Botón Modo Oscuro Móvil -->
+<!--botón modo oscuro movil-->
   <li><a href="#" id="theme-toggle-mobile" aria-label="Alternar modo oscuro"><i class="material-icons left">brightness_6</i> Modo Oscuro</a></li>
 </ul>
 
@@ -59,26 +61,39 @@
 <main class="container page-content-padded">
   
   <div class="row">
+    <div class="col s12 m6 l4">
+      <div class="portafolio-card reveal">
+        <div class="carousel carousel-slider">
+          <a class="carousel-item"><img src="assets/imgs/cge/IMG-20260523-WA0001.jpg" alt="CGE 1"></a>
+          <a class="carousel-item"><img src="assets/imgs/cge/IMG-20260523-WA0002.jpg" alt="CGE 2"></a>
+          <a class="carousel-item"><img src="assets/imgs/cge/IMG-20260523-WA0003.jpg" alt="CGE 3"></a>
+          <a class="carousel-item"><img src="assets/imgs/cge/IMG-20260523-WA0004.jpg" alt="CGE 4"></a>
+        </div>
+        <h5 class="portafolio-title">CGE</h5>
+        <p class="card-desc">Restauración de la fachada del edificio para la empresa CGE.</p>
+      </div>
+    </div>
 
     <div class="col s12 m6 l4">
       <div class="portafolio-card reveal">
-        <div class="card-image-box"><img src="assets\imgs\cge\IMG-20260523-WA0001.jpg" alt="Obra 1"></div>
-        <h5 class="portafolio-title">CGE</h5>
-        <p class="card-desc">Construcción estructura para empresa CGE.</p>
+        <div class="carousel carousel-slider">
+          <a class="carousel-item"><img src="assets/imgs/reparacion-contenedor/IMG-20260523-WA0005.jpg" alt="Contenedor 1"></a>
+          <a class="carousel-item"><img src="assets/imgs/reparacion-contenedor/IMG-20260523-WA0015.jpg" alt="Contenedor 2"></a>
+          <a class="carousel-item"><img src="assets/imgs/reparacion-contenedor/IMG-20260523-WA0019.jpg" alt="Contenedor 3"></a>
+          <a class="carousel-item"><img src="assets/imgs/reparacion-contenedor/IMG-20260523-WA0011.jpg" alt="Contenedor 4"></a>
+        </div>
+        <h5 class="portafolio-title">Reparación de contenedores</h5>
+        <p class="card-desc">Restauraciónd de contenedor industrial.</p>
       </div>
     </div>
+
     <div class="col s12 m6 l4">
       <div class="portafolio-card reveal">
-        <div class="card-image-box"><img src="assets\imgs\reparacion-contenedor\IMG-20260523-WA0005.jpg" alt="Obra 1"></div>
-        <h5 class="portafolio-title">Reparación de contenedores</h5>
-        <p class="card-desc">Reparación de contenedores.</p>
-      </div>
-    </div>
-        <div class="col s12 m6 l4">
-      <div class="portafolio-card reveal">
-        <div class="card-image-box"><img src="assets\imgs\muebles\IMG-20260523-WA0000.jpg" alt="Obra 1"></div>
+        <div class="carousel carousel-slider">
+          <a class="carousel-item"><img src="assets/imgs/muebles/IMG-20260523-WA0000.jpg" alt="Muebles 1"></a>
+        </div>
         <h5 class="portafolio-title">Muebles</h5>
-        <p class="card-desc">Muebles.</p>
+        <p class="card-desc">Realización o restauración de muebles a medida a nivel particular o empresarial.</p>
       </div>
     </div>
   </div>
@@ -86,9 +101,12 @@
   <div class="row">
     <div class="col s12 m6 l4">
       <div class="portafolio-card reveal">
-        <div class="card-image-box"><img src="assets\imgs\grua\DSC00485.png" alt="Obra 1"></div>
+        <div class="carousel carousel-slider">
+          <a class="carousel-item"><img src="assets/imgs/grua/DSC00485.png" alt="Grua 1"></a>
+          <a class="carousel-item"><img src="assets/imgs/grua/DSC00486.png" alt="Grua 2"></a>
+        </div>
         <h5 class="portafolio-title">Grua</h5>
-        <p class="card-desc">Grua.</p>
+        <p class="card-desc">Servicio de grua para transporte de vehículos particulares.</p>
       </div>
     </div>
   </div>
